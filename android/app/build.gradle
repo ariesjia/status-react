@@ -79,7 +79,7 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.Copy
 project.ext.react = [
     nodeExecutableAndArgs: ["node", "--max-old-space-size=16384"],
     entryFile: "index.android.js",
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: false,  // clean and rebuild if changing. Keep it as false for debug builds until Facebook fixes the performance issues with the debug build of Hermes (https://github.com/facebook/react-native/issues/25601#issuecomment-526606416)
     bundleInPr: true,
     inputExcludes: ["android/**", "ios/**", "react-native/**", "src/**", "test/**"]
 ]
